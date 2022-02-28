@@ -82,18 +82,23 @@ function showImages(images) {
         const { previewURL, likes, views, largeImageURL } = img;
 
         result.innerHTML += `
-        <div class='w-1/2 md:w-1/3 lg:w-1/4  p-3 mb-4'>
-            <div class='bg-white'>
-                <img class='w-full' src='${previewURL}' />
-                <div class='p-4'>
-                    <p class='font-bold'>${likes} <span class='font-light'>Me gusta</span></p>
-                    <p class='font-bold'>${views} <span class='font-light'>Vistas</span></p>
-
-                    <a class='w-full bg-blue-800 hover:bg-blue-500 text-white uppercase font-bold text-center rounded mt-5 p-1' href='${largeImageURL}' target='_blank' rel='noopener noreferrer'>Ver Imagen</a>
-                <div>
-            <div>
-        <div>
-        `
+        <div class='card-container w-1/2 md:w-1/3 lg:w-1/4 p-3 mb-4'>
+            <div class='bg-white card-body'>
+                <img class='w-full card-img' src='${previewURL}' />
+                <div class='p-4 card-txt'>
+                    <div class='font-bold div-likes'>
+                        <img class='icon-like' src='/img/like.svg' />
+                        <span class='txt-likes'>${likes} </span>
+                    </div>
+                    <div class='font-bold div-views'>
+                        <img class='icon-view' src='/img/view.svg' />
+                        <span class='txt-views'>${views} </span>
+                    </div>
+                </div>
+                <a class='btn-link w-full bg-blue-800 hover:bg-blue-500 text-white uppercase font-bold text-center rounded mt-5 p-1' href='${largeImageURL}' target='_blank' rel='noopener noreferrer'>Ver Imagen</a>
+            </div>
+        </div>
+        `;
     });
 
     while (paginationDiv.firstChild) {

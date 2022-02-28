@@ -1,6 +1,80 @@
+:root {
+  --primary-color: #09090c;
+  --secondary-color: #151517;
+  --btn-color-primary: #bd8df5;
+  --btn-color-secondary: #5948d3;
+}
+
 body {
-  background: #2C3E50;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #4CA1AF, #2C3E50);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #4CA1AF, #2C3E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  
+  /* background: var(--primary-color);
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color)); */
+  background-color: var(--primary-color);
+}
+
+.container-buscador {
+  background-color: var(--secondary-color);
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+}
+
+.container-buscador h1 {
+  margin-top: 1rem;
+}
+
+.container-buscador form .btn-search {
+  background: linear-gradient(to right, var(--btn-color-primary), var(--btn-color-secondary));
+  border-radius: 25px;
+  color: white;
+  text-transform: capitalize;
+}
+
+.container-results .card-container .card-body {
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.container-results .card-container .card-body .card-txt {
+  position: absolute;
+  bottom: 35px;
+  right: 0;
+  width: 100%;
+  display: flex;
+  padding: 0 .3rem;
+}
+
+.container-results .card-container .card-body .card-txt div {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0 .3rem;
+  border-radius: 25px;
+}
+
+.container-results .card-container .card-body .card-txt .div-likes {
+  margin-left: auto;
+  margin-right: .3rem;
+}
+
+.container-results .card-container .card-body .card-txt span {
+  display: flex;
+  align-items: center;
+  font-size: .7rem;
+}
+
+.container-results .card-container .card-body .card-txt img {
+  width: 10px;
+  margin-right: .3rem;
+}
+
+.container-results .card-container .card-body .btn-link {
+  margin-top: 0;
+  width: 100%;
+  display: block;
+  border-radius: 0;
+  transition: background-color .3s ease-in-out;
+  background: linear-gradient(to right, var(--btn-color-primary), var(--btn-color-secondary));
+  text-transform: capitalize;
 }
