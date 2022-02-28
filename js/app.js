@@ -82,7 +82,7 @@ function showImages(images) {
         const { previewURL, likes, views, largeImageURL } = img;
 
         result.innerHTML += `
-        <div class='card-container w-1/2 md:w-1/3 lg:w-1/4 p-3 mb-4'>
+        <div class='card-container w-1/2 md:w-1/3 lg:w-1/4 p-3'>
             <div class='bg-white card-body'>
                 <img class='w-full card-img' src='${previewURL}' />
                 <div class='p-4 card-txt'>

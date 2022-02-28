@@ -6,8 +6,6 @@
 }
 
 body {
-  /* background: var(--primary-color);
-  background: linear-gradient(to right, var(--primary-color), var(--secondary-color)); */
   background-color: var(--primary-color);
 }
 
@@ -27,6 +25,20 @@ body {
   border-radius: 25px;
   color: white;
   text-transform: capitalize;
+}
+
+.container-results {
+  background-color: var(--secondary-color);
+  border-radius: 8px;
+  padding: .5rem;
+}
+
+.container-results .card-container {
+  transition: transform .3s ease-in-out;
+}
+
+.container-results .card-container:hover {
+  transform: translateY(-5px);
 }
 
 .container-results .card-container .card-body {
